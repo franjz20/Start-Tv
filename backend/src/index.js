@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Trust the first proxy (Northflank/Render/Nginx) so rate limiting sees real client IPs
+// Trust the first proxy (Fly.io/Northflank/Render/Nginx) so rate limiting sees real client IPs
 app.set('trust proxy', 1);
 
 // Security middleware
